@@ -1,0 +1,25 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "sourceType": "module",
+    "include": ["src/**/*.ts", "src/**/*.js", "test/**/*.ts"]
+  },
+  "extends": ["plugin:@typescript-eslint/recommended"],
+  "rules": {
+    "quotes": ["error", "single"],
+    "no-unused-expressions": "off",
+    "@typescript-eslint/no-var-requires": 0
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "settings": {
+    "import/resolver": {
+      "@typescript-eslint/parser": {
+        "extensions": [".ts", ".tsx"]
+      }
+    }
+  }
+}
